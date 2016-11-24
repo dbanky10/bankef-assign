@@ -15,34 +15,36 @@ function fizzBuzz(num) {
 }
 ),
 module.exports ={
-function fizzBuzz(num) {
-  if (num % 3 === 0  &&  num % 5 === 0) {
-    return "FizzBuzz"
-  }
-  else if (num % 5 === 0){
-    return "Buzz"
-  }
-  else if (num % 3 === 0) {
-    return "Fizz"
-  }
-  else {
-    return num
-  }
-}
-),
+function MinMax(array) {
+  for (var i = 1; i < array.length; i++){
+   var min = Math.min.apply(Math,array)
+   var max = Math.max.apply(Math,array)
+  return [min, max];
+  ),
+  
+
 module.exports ={
-function fizzBuzz(num) {
-  if (num % 3 === 0  &&  num % 5 === 0) {
-    return "FizzBuzz"
-  }
-  else if (num % 5 === 0){
-    return "Buzz"
-  }
-  else if (num % 3 === 0) {
-    return "Fizz"
-  }
-  else {
-    return num
-  }
+function ArithGeo(arr) { 
+
+var diff = arr[1] - arr[0];
+var ratio = arr[1] / arr[0];
+
+var arit = true;
+var geo = true;
+
+for(var i = 0; i < arr.length - 1; i++)
+{
+    if( arr[i + 1] - arr[i] !== diff )
+      arit = false;
+    if(arr[i + 1] / ratio !== arr[i])
+      geo = false;
+}
+
+if(arit === true)
+    return "arithmetic";
+else if(geo === true)
+    return" geometric";
+else
+    return -1;
 }
 )
